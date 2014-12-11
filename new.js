@@ -119,18 +119,18 @@ function getDepartures($scope, siteid, stationname, number) {
 			// There should be 6 depatures for each line if they are complete
 			// Only retry max two times
 			
-			// if (metros.length % 6 != 0 || trains.length % 6 != 0) {
-			// 	retries++;
-			// 	if (retries < 3) {
-			// 		getDepartures($scope, siteid, stationname, number);
-			// 		console.log("Incomplete answer, reloaded for station" + stationname + " retry no " + retries);
-			// 		return;
-			// 	} else {
-			// 		retries = 0;
-			// 	}
-			// } else {
-			// 	console.log("all was OK with request for " + siteid + ' ' + stationname);
-			// }
+			if (metros.length % 6 != 0 || trains.length % 6 != 0) {
+				retries++;
+				if (retries < 3) {
+					getDepartures($scope, siteid, stationname, number);
+					console.log("Incomplete answer, reloaded for station" + stationname + " retry no " + retries);
+					return;
+				} else {
+					retries = 0;
+				}
+			} else {
+				console.log("all was OK with request for " + siteid + ' ' + stationname);
+			}
 
 
 			$scope.$apply(function(){
