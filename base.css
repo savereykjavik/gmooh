@@ -41,6 +41,9 @@ h1 {
   font-size: 2em;
   margin-bottom: 0.6em;
   margin-top: 1.7em;
+  padding-bottom: 17px;
+  padding-top: 23px;
+  text-align: center;
 }
 
 h2 {
@@ -62,7 +65,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 0em;
+  margin: 3px;
   font-size: 1.5em;
 }
 
